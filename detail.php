@@ -1,10 +1,10 @@
 <?php
 $id = intval( $_GET['id'] );
-$cvlist = unserialize( file_get_contents( './data.php' )) ;
+$data_array = unserialize( file_get_contents( './data.php' )) ;
+$cvlist = $data_array['resumes'] ;
+
 if( isset( $cvlist[$id] ) )
     $data = $cvlist[$id];
-
-
 ?>
 <!DOCTYPE html>
 <html>

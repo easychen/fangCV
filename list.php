@@ -1,5 +1,6 @@
 <?php
-$cvlist = unserialize( file_get_contents( './data.php' )) ;
+$data_array = unserialize( file_get_contents( './data.php' )) ;
+$cvlist = $data_array['resumes'];
 ?><!DOCTYPE html>
 <html>
 <head>
