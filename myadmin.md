@@ -56,21 +56,34 @@
 
 ##### 唯一查询 
 
-- distinct
-- group by
+- distinct // 班级唯一
+- group by // 班级id
 
 ##### 子查询
 
-- in 
+- in // 所有男生的简历
 
 ##### 联表查询
 
-- join
-- union
+- join // FROM resume a INNER JOIN user b ON a.user_id = b.id;
+- left join // 以左表展开，即使右表没有数据，也会返回一条记录。
+- 从 join 转向二次查询，提升性能
+
+- union 
+
+SELECT country FROM Websites
+UNION
+SELECT country FROM apps
+ORDER BY country;
+
+
+UNION 只会选取不同的值。请使用 UNION ALL 来选取重复的值！
+
+Union 在分库分表时很常用。
 
 ##### 分库分表
 
-- 大字段分离
+- 大字段分离,修表修起来特别慢
 - hash分库分表
 
 ##### 查询优化
